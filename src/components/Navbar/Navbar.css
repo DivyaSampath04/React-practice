@@ -1,0 +1,38 @@
+.nav-bar {
+  max-height: 5em !important;
+  min-height: 0px !important;
+  background-color: #051c8c;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 6px 0px;
+}
+
+.tab-text {
+    font-weight: 500 !important;
+    font-size: 1.1em;
+    margin-left : 0.5em;
+    margin-right: 0.7em;
+    cursor: pointer;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+  .under-line {
+    height: 0.2em;
+    background-color: white;
+    margin-top : -1.2em;
+    
+  }
+  .under-line-hide {
+    height: 0.2em;
+    margin-top : -1.2em;
+   
+  }
+  .headLinkStyle {
+    text-decoration: none !important;
+    color: black !important;
+  }
