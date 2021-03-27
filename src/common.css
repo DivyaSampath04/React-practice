@@ -9,3 +9,11 @@
     align-items: center;
     cursor: pointer;
 }
+.flex-margin {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em;
+}
+.icon-style {
+    cursor: pointer;
+}

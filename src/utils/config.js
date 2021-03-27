@@ -16,22 +16,22 @@ export const staff_data = [
     created : "25/03/2021"
   },
   {
-    id: "1",
-    name: "John Doe",
+    id: "2",
+    name: "Jeff B",
     gender: "Male",
     phone: "000000000",
     created : "25/03/2021"
   },
   {
-    id: "1",
-    name: "John Doe",
+    id: "3",
+    name: "Tom H",
     gender: "Male",
     phone: "000000000",
     created : "25/03/2021"
   },
   {
-    id: "1",
-    name: "John Doe",
+    id: "4",
+    name: "Micheal J",
     gender: "Male",
     phone: "000000000",
     created : "25/03/2021"
