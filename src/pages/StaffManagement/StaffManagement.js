@@ -19,6 +19,7 @@ class StaffManagement extends React.Component {
     gender: "",
     action: "",
     ref: "",
+    title : ""
   };
   componentDidMount = () => {
     this.setState({
@@ -37,6 +38,7 @@ class StaffManagement extends React.Component {
         name: this.state.name,
         phone: this.state.phone,
         gender: this.state.gender,
+       
       };
       staff_data_copy.push(new_data);
     } else {
@@ -45,6 +47,7 @@ class StaffManagement extends React.Component {
         name: this.state.name,
         phone: this.state.phone,
         gender: this.state.gender,
+       
       };
     }
     this.setState({ add_open: false, staff_data: staff_data_copy });
@@ -52,8 +55,9 @@ class StaffManagement extends React.Component {
   openPopup = (action, id, ref) => {
     this.setState({ add_open: true, action: action, ref: ref });
     if (action === "add") {
-      this.setState({ id: "", name: "", phone: "", gender: "" });
+      this.setState({ id: "", name: "", phone: "", gender: "" ,title : 'Add Staff'});
     } else {
+      this.setState({title : 'Edit Staff'})
       config.staff_data.forEach((data) => {
         id === data.id &&
           this.setState({
@@ -61,6 +65,7 @@ class StaffManagement extends React.Component {
             name: data.name,
             phone: data.phone,
             gender: data.gender,
+            
           });
       });
     }
@@ -88,6 +93,7 @@ class StaffManagement extends React.Component {
               Add
             </Button>
           </div>
+          <br />
           <TableContainer component={Paper}>
             <Table stickyHeader aria-label="customized table">
               <TableHeader data={this.state.staff_header} />
@@ -105,6 +111,7 @@ class StaffManagement extends React.Component {
           saveChanges={this.saveChanges}
           cancelChanges={this.cancelChanges}
           closePopup={this.closePopup}
+  
         />
       </div>
     );

@@ -15,7 +15,6 @@ class TableData extends React.Component {
                 <TableCell>{dt.name}</TableCell>
                 <TableCell>{dt.gender}</TableCell>
                 <TableCell>{dt.phone}</TableCell>
-                <TableCell>{dt.created}</TableCell>
                 <TableCell>
                   <EditIcon
                     className="icon-style"
