@@ -37,3 +37,5 @@ export const staff_data = [
     created : "25/03/2021"
   },
 ];
+
+localStorage.setItem('staff_data ',JSON.stringify(staff_data));
