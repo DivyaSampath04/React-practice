@@ -25,7 +25,7 @@ class Navbar extends Component {
   };
 
   render() {
-    let tab = window.location.href.toString().split("/")[3];
+   // let tab = window.location.href.toString().split("/")[3];
     const classes = "doc-route tabs";
     let { changeCurrentPage } = this.props;
     return (
@@ -38,11 +38,10 @@ class Navbar extends Component {
         >
           <ListItem style={{ display: "grid" }}>
             <p className="tab-text">Staff Management</p>
-            {tab === "staff" ? (
+        
               <div className="under-line"></div>
-            ) : (
-              <div className="under-line-hide"></div>
-            )}
+           
+            
           </ListItem>
         </NavLink>
       </div>
