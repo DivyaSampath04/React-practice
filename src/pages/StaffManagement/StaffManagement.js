@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import { Table, TableContainer, Paper, Button } from "@material-ui/core";
 import * as config from "../../utils/config";
 import TableData from "./StaffTable/TableData/TableData";
@@ -57,7 +58,7 @@ class StaffManagement extends React.Component {
     if (action === "add") {
       this.setState({ id: "", name: "", phone: "", gender: "" ,title : 'Add Staff'});
     } else {
-      this.setState({title : 'Edit Staff'})
+      action === 'edit' ? this.setState({title : 'Edit Staff'}) : this.setState({title : 'View Staff'})
       config.staff_data.forEach((data) => {
         id === data.id &&
           this.setState({
@@ -105,6 +106,7 @@ class StaffManagement extends React.Component {
             </Table>
           </TableContainer>
         </div>
+        <Footer />
         <AddStaff
           data={this.state}
           handleChange={this.handleChange}
@@ -113,6 +115,7 @@ class StaffManagement extends React.Component {
           closePopup={this.closePopup}
   
         />
+       
       </div>
     );
   }

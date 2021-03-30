@@ -17,7 +17,7 @@ class AddStaff extends React.Component {
   render() {
     return (
       <>
-        <Dialog open={this.props.data.add_open}>
+        <Dialog open={this.props.data.add_open} className = 'pop-up-staff'>
           <DialogTitle className="add-staff-title">
             <div className="flex-space-between">
               <p className="pop-title">{this.props.data.title}</p>
@@ -30,6 +30,8 @@ class AddStaff extends React.Component {
           </DialogTitle>
           <DialogContent>
             <div>
+              {this.props.data.action === 'edit' ||  this.props.data.action === 'add'? 
+              <>
               <div className="flex-space-between">
                 <TextField
                   autoComplete = "off"
@@ -86,6 +88,40 @@ class AddStaff extends React.Component {
                   Cancel
                 </Button>
               </div>
+              </>
+              : 
+              <div className = 'view-only'>
+            <div className = 'flex-space-between'>
+              <div>
+              <div className="each-header-data">
+              <p className="label-font">Name</p>
+              <p className="value-font">
+              {this.props.data.name}
+              </p>
+            </div>
+            <div className="each-header-data">
+              <p className="label-font">Email Id</p>
+              <p className="value-font">
+              {this.props.data.id}
+              </p>
+              </div>
+            </div>
+           <div>
+            <div className="each-header-data">
+              <p className="label-font">Phone Number</p>
+              <p className="value-font">
+              {this.props.data.phone}
+              </p>
+            </div>
+            <div className="each-header-data">
+              <p className="label-font">Gender</p>
+              <p className="value-font">
+              {this.props.data.gender}
+              </p>
+            </div>
+            </div>
+            </div>
+            </div>}
             </div>
           </DialogContent>
         </Dialog>

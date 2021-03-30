@@ -10,6 +10,7 @@
   top: 0;
   z-index: 500;
   box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 6px 0px;
+  width: 100%;
 }
 
 .tab-text {
@@ -35,4 +36,18 @@
   .headLinkStyle {
     text-decoration: none !important;
     color: black !important;
+  }
+
+  .prod-name {
+    color: white;
+    font-size: 1.3em;
+    padding : 0px 8px;
+  }
+  .prod-bg {
+     background-color: #465386;
+  }
+  .menu-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }

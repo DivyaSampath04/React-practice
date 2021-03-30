@@ -17,3 +17,41 @@
 .icon-style {
     cursor: pointer;
 }
+.only-flex {
+    display: flex;
+}
+.vertical-line {
+    background-color: #736e6e;
+    border: 1px solid #736e6e;
+  }
+  .link-style {
+      color: #051c8c;
+      cursor: pointer;
+  }
+  .link-style:hover{
+    text-decoration: underline;
+  }
+/*==================Mui styles override================*/
+
+#simple-menu1 .MuiPaper-root {
+    top: 47px !important;
+    left : 50% !important
+}
+#simple-menu2 .MuiPaper-root {
+    top: 47px !important;
+    left: 60%  !important;
+}
+#simple-menu .MuiMenu-list li {
+    margin-left: 10px;
+}
+
+
+#simple-menu .MuiMenu-list li:last-child {
+    width: 167px;
+   
+}
+
+#simple-menu .MuiMenu-list a {
+    text-decoration: none;
+    color: #000;
+}

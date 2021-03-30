@@ -12,7 +12,7 @@ class TableData extends React.Component {
             this.props.data.map((dt, i) => (
               <TableRow key={i}>
                 <TableCell>{dt.id}</TableCell>
-                <TableCell>{dt.name}</TableCell>
+                <TableCell><div className = 'link-style'  onClick={() => this.props.openPopup("view", dt.id, i)}>{dt.name}</div></TableCell>
                 <TableCell>{dt.gender}</TableCell>
                 <TableCell>{dt.phone}</TableCell>
                 <TableCell>

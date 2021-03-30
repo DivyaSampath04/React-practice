@@ -1,0 +1,20 @@
+.footer {
+    max-height: 5em !important;
+    min-height: 0px !important;
+    background-color: #051c8c;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 500;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 6px 0px;
+  }
+
+.footer-text {
+    color: lightgrey;
+    font-size: 1em;
+    margin: 8px auto;
+}
+

@@ -12,3 +12,26 @@
 .button-align {
     text-align: center;
 }
+.each-header-data {
+     text-align: left;
+   
+     
+ }
+ .value-font {
+    
+    margin : 0px;
+    margin-top: 5px;
+   
+  }
+  .label-font {
+    margin : 0px;
+    margin-top: 20px;
+    font-weight: 300;
+  }
+  .popup-up-staff {
+      width: 400px;
+  }
+  .view-only {
+    width: 300px;
+    margin: 20px;
+  }
