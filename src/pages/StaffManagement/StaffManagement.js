@@ -5,6 +5,7 @@ import { Table, TableContainer, Paper, Button } from "@material-ui/core";
 import * as config from "../../utils/config";
 import TableData from "./StaffTable/TableData/TableData";
 import TableHeader from "./StaffTable/TableHeader/TableHeader";
+import TablePage from "../../components/TablePage/TablePage";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import AddStaff from "./AddStaff/AddStaff";
 import "./StaffManagement.css";
@@ -20,7 +21,10 @@ class StaffManagement extends React.Component {
     gender: "",
     action: "",
     ref: "",
-    title : ""
+    title : "",
+    startRecordNum : -1,
+    recordsPerPage : 5,
+    pageNum :0
   };
   componentDidMount = () => {
     this.setState({
@@ -31,6 +35,12 @@ class StaffManagement extends React.Component {
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
+  handleChangePage = (event, newPage) =>{
+    let recordsPerPage = this.state.recordsPerPage;
+		this.setState({startRecordNum : recordsPerPage* newPage});
+    this.setState({pageNum :  newPage});
+        
+  }
   saveChanges = () => {
     let staff_data_copy = [...this.state.staff_data];
     if (this.state.action === "add") {
@@ -84,6 +94,9 @@ class StaffManagement extends React.Component {
       <div>
         <Navbar />
         <div className="full-view">
+          <div>
+            <p className = 'page-title'>STAFF MANAGEMENT</p>
+          </div>
           <div className="flex-space-between">
             <SearchBar />
             <Button
@@ -102,9 +115,17 @@ class StaffManagement extends React.Component {
                 data={this.state.staff_data}
                 openPopup={this.openPopup}
                 deleteData={this.deleteData}
+                startRecordNum = {this.state.startRecordNum}
+                recordsPerPage = {this.state.recordsPerPage}
               />
             </Table>
           </TableContainer>
+          <TablePage
+              count ={this.state.staff_data.length}
+              recordsPerPage = {this.state.recordsPerPage}
+              pageNum = {this.state.pageNum}
+              handleChangePage = {this.handleChangePage}
+          />
         </div>
         <Footer />
         <AddStaff

@@ -5,3 +5,48 @@
     flex-direction: column;
     padding: 15px;
 }
+.page-title {
+    text-align: left;
+    font-size: 1.3em;
+}
+
+/*==================Mui styles override================*/
+
+#simple-menu1 .MuiPaper-root {
+    top: 47px !important;
+    left : 47% !important
+}
+#simple-menu2 .MuiPaper-root {
+    top: 47px !important;
+    left: 57%  !important;
+}
+#simple-menu3 .MuiPaper-root {
+    top: 47px !important;
+    left: 31%  !important;
+}
+#simple-menu4 .MuiPaper-root {
+    top: 47px !important;
+    left: 36%  !important;
+}
+#simple-menu .MuiMenu-list li {
+    margin-left: 10px;
+}
+
+.MuiMenu-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+#simple-menu2 .MuiMenu-list a {
+    text-decoration: none;
+    color: #000;
+}
+#simple-menu .MuiMenu-list li:last-child {
+    width: 167px;
+   
+}
+
+#simple-menu .MuiMenu-list a {
+    text-decoration: none;
+    color: #000;
+}

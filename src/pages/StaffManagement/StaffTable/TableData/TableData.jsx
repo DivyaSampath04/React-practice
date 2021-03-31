@@ -9,7 +9,9 @@ class TableData extends React.Component {
       <>
         <TableBody>
           {this.props.data &&
-            this.props.data.map((dt, i) => (
+            this.props.data.map((dt, i) => 
+            i >= this.props.startRecordNum && i <= (this.props.startRecordNum + this.props.recordsPerPage) && 
+            <>
               <TableRow key={i}>
                 <TableCell>{dt.id}</TableCell>
                 <TableCell><div className = 'link-style'  onClick={() => this.props.openPopup("view", dt.id, i)}>{dt.name}</div></TableCell>
@@ -28,7 +30,8 @@ class TableData extends React.Component {
                   />
                 </TableCell>
               </TableRow>
-            ))}
+              </>
+            )}
         </TableBody>
       </>
     );
