@@ -38,12 +38,12 @@ class Navbar extends Component {
     let { changeCurrentPage } = this.props;
     return (
       <div className="nav-bar">
-        <div className = 'only-flex' >
+        <div className = 'only-flex'style= {{width : '100%'}} >
           <div className = 'prod-bg'>
             <p className = 'prod-name'>Advanced Construction Monitoring and Analysis</p>
           </div>
           <div className = 'vertical-line'></div>
-        <div className = 'only-flex'>
+        <div className = 'only-flex' style = {{width : '55%'}}>
         <NavLink
           exact
           to={c.PAGE_URLS[c.PAGE_STAFF]}

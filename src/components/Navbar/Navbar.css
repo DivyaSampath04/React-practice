@@ -45,6 +45,8 @@
   }
   .prod-bg {
      background-color: #465386;
+     width : 30%;
+     float: left;
   }
   .menu-holder {
     display: flex;
