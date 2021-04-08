@@ -13,10 +13,18 @@ class TableData extends React.Component {
             i >= this.props.startRecordNum && i <= (this.props.startRecordNum + this.props.recordsPerPage) && 
             <>
               <TableRow key={i}>
-                <TableCell>{dt.id}</TableCell>
+                
                 <TableCell><div className = 'link-style'  onClick={() => this.props.openPopup("view", dt.id, i)}>{dt.name}</div></TableCell>
-                <TableCell>{dt.gender}</TableCell>
-                <TableCell>{dt.phone}</TableCell>
+                <TableCell>{dt.org}</TableCell>
+                <TableCell>{dt.role}</TableCell>
+                <TableCell>{dt.id}</TableCell>
+                <TableCell>{dt.phone}</TableCell>                
+                <TableCell>{dt.address}</TableCell>
+                <TableCell>{dt.area}</TableCell>
+                <TableCell>{dt.city}</TableCell>
+                <TableCell>{dt.state}</TableCell>
+                <TableCell>{dt.country}</TableCell>
+                <TableCell>{dt.rec_active}</TableCell>
                 <TableCell>
                   <EditIcon
                     className="icon-style"

@@ -15,10 +15,19 @@ class StaffManagement extends React.Component {
     add_open: false,
     staff_data: [],
     staff_header: [],
-    id: "",
-    name: "",
-    phone: "",
-    gender: "",
+    staff_details : {
+        name: "",
+        org: "",
+        role: "",
+        id: "",
+        phone: "",
+        address: "",
+        area: "",
+        city: "",
+        state: "",
+        country: "",
+        rec_active: "",
+    },
     action: "",
     ref: "",
     title : "",
@@ -33,7 +42,11 @@ class StaffManagement extends React.Component {
     });
   };
   handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+    //this.setState({ [event.target.name]: event.target.value });
+    let val = event.target.value;
+    let name = event.target.name;
+    this.state.staff_details[name] = val;
+    this.setState({ staff_details: this.state.staff_details });
   };
   handleChangePage = (event, newPage) =>{
     let recordsPerPage = this.state.recordsPerPage;
@@ -44,39 +57,36 @@ class StaffManagement extends React.Component {
   saveChanges = () => {
     let staff_data_copy = [...this.state.staff_data];
     if (this.state.action === "add") {
-      var new_data = {
-        id: this.state.id,
-        name: this.state.name,
-        phone: this.state.phone,
-        gender: this.state.gender,
-       
-      };
+      var new_data = this.state.staff_details;
       staff_data_copy.push(new_data);
     } else {
-      staff_data_copy[this.state.ref] = {
-        id: this.state.id,
-        name: this.state.name,
-        phone: this.state.phone,
-        gender: this.state.gender,
-       
-      };
+      staff_data_copy[this.state.ref] = this.state.staff_details;
     }
     this.setState({ add_open: false, staff_data: staff_data_copy });
   };
   openPopup = (action, id, ref) => {
     this.setState({ add_open: true, action: action, ref: ref });
     if (action === "add") {
-      this.setState({ id: "", name: "", phone: "", gender: "" ,title : 'Add Staff'});
+      this.setState({
+        staff_details : { name: "", org : "",role: "", id: "", phone: "",area : "", address: "", city: "", state: "", country: ""}, title : 'Add Staff'});
     } else {
       action === 'edit' ? this.setState({title : 'Edit Staff'}) : this.setState({title : 'View Staff'})
-      config.staff_data.forEach((data) => {
+      this.state.staff_data.forEach((data) => {
         id === data.id &&
           this.setState({
-            id: data.id,
-            name: data.name,
-            phone: data.phone,
-            gender: data.gender,
-            
+            staff_details : {
+              name: data.name,
+              org: data.org,
+              role: data.role,
+              id: data.id,
+              phone: data.phone,
+              address: data.address,
+              area: data.area,
+              city: data.city,
+              state: data.state,
+              country: data.country,
+              rec_active: data.rec_active,
+            }
           });
       });
     }

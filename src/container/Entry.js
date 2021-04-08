@@ -1,6 +1,6 @@
 import React from "react";
 import StaffManagement from "../pages/StaffManagement/StaffManagement";
-
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 import {
   BrowserRouter,
@@ -25,6 +25,17 @@ class Entry extends React.Component {
                render={(props) => (
             
                  <StaffManagement
+                 {...props}  
+               />
+               )}
+               />
+
+          <Route
+               exact
+               path={c.PAGE_URLS[c.PAGE_DASHBOARD]}
+               render={(props) => (
+            
+                 <Dashboard
                  {...props}  
                />
                )}
