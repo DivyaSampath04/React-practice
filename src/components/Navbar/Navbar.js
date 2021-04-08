@@ -168,7 +168,7 @@ class Navbar extends Component {
                 <Link to="">
                   <MenuItem>Projects</MenuItem>
                 </Link>
-                <Link to="/staff">
+                <Link to="/staff" exact>
                   <MenuItem>Staff</MenuItem>
                 </Link>
                 <Link to="">
