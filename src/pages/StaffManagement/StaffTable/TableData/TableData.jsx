@@ -19,11 +19,6 @@ class TableData extends React.Component {
                 <TableCell>{dt.role}</TableCell>
                 <TableCell>{dt.id}</TableCell>
                 <TableCell>{dt.phone}</TableCell>                
-                <TableCell>{dt.address}</TableCell>
-                <TableCell>{dt.area}</TableCell>
-                <TableCell>{dt.city}</TableCell>
-                <TableCell>{dt.state}</TableCell>
-                <TableCell>{dt.country}</TableCell>
                 <TableCell>{dt.rec_active}</TableCell>
                 <TableCell>
                   <EditIcon

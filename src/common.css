@@ -31,3 +31,7 @@
   .link-style:hover{
     text-decoration: underline;
   }
+/*===============overriding M-ui styles===============*/
+.MuiTableCell-root {
+    padding: 12px !important;
+}
