@@ -22,6 +22,7 @@ class Navbar extends Component {
     sec: null,
     site: null,
     ds: null,
+    prof : null
   };
   componentDidMount() {}
 
@@ -30,6 +31,7 @@ class Navbar extends Component {
     else if (tab === "sec") this.setState({ sec: event.currentTarget });
     else if (tab === "site") this.setState({ site: event.currentTarget });
     else if (tab === "ds") this.setState({ ds: event.currentTarget });
+    else if (tab === "prof") this.setState({ prof: event.currentTarget });
   };
 
   handleClose = (tab) => {
@@ -37,6 +39,7 @@ class Navbar extends Component {
     else if (tab === "sec") this.setState({ sec: null });
     else if (tab === "site") this.setState({ site: null });
     else if (tab === "ds") this.setState({ ds: null });
+    else if (tab === "prof") this.setState({ prof: null });
   };
 
   render() {
@@ -113,7 +116,7 @@ class Navbar extends Component {
                 onClose={() => this.handleClose("site")}
                 open={Boolean(this.state.site)}
               >
-                <Link to="/">
+                <Link to="/dashboard">
                   <MenuItem>Dashboard</MenuItem>
                 </Link>
 
@@ -204,7 +207,7 @@ class Navbar extends Component {
           <div className="flex-text-icon">
             <NavLink
               exact
-              to={c.PAGE_URLS[c.PAGE_STAFF]}
+              to={c.PAGE_URLS[c.PAGE_LOGIN]}
               className="headLinkStyle"
             >
               <ListItem style={{ display: "grid" }}>
@@ -213,7 +216,30 @@ class Navbar extends Component {
                   style={{ color: "white" }}
                 />
               </ListItem>
-            </NavLink>
+           </NavLink>
+          {/*  <div className="menu-holder">
+              <div>
+            <AccountCircleIcon
+                  fontSize="large"
+                  style={{ color: "white" }}
+                  onClick={(event) => this.handleClick(event, "prof")}
+                />
+                </div>
+              <Menu
+                // name = 'sec'
+                id="simple-menu2"
+                sec={this.state.prof}
+                keepMounted
+                onClose={() => this.handleClose("prof")}
+                open={Boolean(this.state.prof)}
+              >
+                <Link to="/">
+                  <MenuItem>Logout</MenuItem>
+                </Link>
+
+              
+              </Menu>
+          </div>*/}
           </div>
         </div>
       </div>

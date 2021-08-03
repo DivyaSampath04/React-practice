@@ -1,0 +1,102 @@
+.login-page {
+  min-height: 100vh;
+}
+.textDiv {
+  margin-top: 1.2em;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-box {
+  min-height: 64vh;
+}
+.cardStyle {
+  border-radius: 10px !important;
+  border: 1px solid #465386;
+  margin: 16vh auto 0px auto;
+  width: 400px;
+  height: 47vh;
+}
+
+.user-input-username {
+  margin-top: 1.75em;
+  text-align: center;
+}
+
+.user-input-pwd {
+  margin-top: 6%;
+  text-align: center;
+}
+.user-input-login {
+  margin-top: 6%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5em 3.5em 0.5em 0em;
+}
+
+.forgot-pwd {
+  font-size: 0.8em;
+  line-height: 1em;
+  cursor: pointer;
+  color: #4f4f4f;
+}
+.text-box {
+  width: 300px;
+  height: 37px !important;
+  margin: -12px auto auto 0px;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid rgba(141, 141, 141, 0.7);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.text-style {
+  text-align: justify;
+  margin-left: 50px;
+  font-size: 1.2em;
+  line-height: 21px;
+  margin: 0px 0px 5px 50px;
+}
+
+.button-style {
+  width: 150px;
+  height: 36px;
+  border-style: none;
+  float: left;
+  background-color: #465386;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-style:focus {
+  outline: none !important;
+}
+
+.button-text {
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.error-msg {
+  color: red;
+  font-size: 1em;
+  padding-left: 5px;
+  margin: 0px;
+}
+.success-msg {
+  color: green;
+  font-size: 1em;
+  padding-left: 5px;
+  margin: 0px;
+}
+.msg-div {
+  display: flex;
+
+  align-items: center;
+  margin: 15px 0px 0px 45px;
+}
